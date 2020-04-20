@@ -1,6 +1,6 @@
 package laptop;
 
-public class HardDrive {
+public class HardDrive implements Cloneable {
     String name;
     String type;
     int capacity;
@@ -18,5 +18,10 @@ public class HardDrive {
                 ", type='" + type + '\'' +
                 ", capacity=" + capacity +
                 '}';
+    }
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return (HardDrive) super.clone();
+
     }
 }

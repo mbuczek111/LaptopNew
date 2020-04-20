@@ -30,9 +30,14 @@ public class Laptop implements Cloneable {
                 '}';
     }
 
+
     @Override
     public Object clone() throws CloneNotSupportedException {
-        Laptop cloned = (Laptop) super.clone();
-        return cloned;
+        Laptop comp = null;
+            comp = (Laptop) super.clone();
+
+        comp.procesor = (Processor) this.procesor.clone();
+        comp.dysk = (HardDrive) this.dysk.clone();
+        return comp;
     }
 }

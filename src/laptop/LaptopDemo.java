@@ -6,5 +6,9 @@ public class LaptopDemo {
         Laptop acer = (Laptop) lenovo.clone();
         System.out.println(lenovo);
         System.out.println(acer);
+        acer.procesor.name="intel";
+        acer.dysk.name="WD";
+        System.out.println(lenovo);
+        System.out.println(acer);
     }
 }

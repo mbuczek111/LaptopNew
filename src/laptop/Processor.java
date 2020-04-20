@@ -1,6 +1,6 @@
 package laptop;
 
-public class Processor {
+public class Processor implements Cloneable{
     String name;
     int frequency;
     int cores;
@@ -18,5 +18,10 @@ public class Processor {
                 ", frequency=" + frequency +
                 ", cores=" + cores +
                 '}';
+    }
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+            return (Processor) super.clone();
+
     }
 }
